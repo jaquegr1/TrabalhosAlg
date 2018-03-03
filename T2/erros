@@ -1,0 +1,6 @@
+Considerações da helo:
+
+- Não implementou todas as funções para trabalhar com pastas: consultar os arquivos de uma determinada pasta, 
+criar e alterar o nome de pastas, mudar um arquivo de pasta, ...
+- Não permite que o usuário altere data e horário do sistema.
+- Ajuda não é ativada por F1
