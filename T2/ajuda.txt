@@ -1,0 +1,1 @@
+Esse programa eh um simples controle de estoque. Para controle do usuario pode ser criado uma pasta, e o programa ira gerar um arquivo binario com todas as informações do controle de estoque.
