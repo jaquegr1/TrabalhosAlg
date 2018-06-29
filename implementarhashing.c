@@ -1,14 +1,14 @@
-/*Implementar as funções hashing: 
-(1) Divisão inteira,
+/*Implementar as funÃ§Ãµes hashing: 
+(1) DivisÃ£o inteira,
 (2) Meio Quadrado,
-(3) Transformação da raiz.
+(3) TransformaÃ§Ã£o da raiz.
 
-As funções devem ser com o seguinte protótipo:
+As funÃ§Ãµes devem ser com o seguinte protÃ³tipo:
 int <nome_funcao> (<tipo> chave, int M).
 
-Onde: <nome_funcao> representará a função implementada e retornará um inteiro (representa o índice da tabela.
-"chave" é o valor a ser calculado, que pode ser um int, char[], long int etc (dependerá do valor a ser passado para a função.
-"M" é o tamanho da tabela.
+Onde: <nome_funcao> representarÃ¡ a funÃ§Ã£o implementada e retornarÃ¡ um inteiro (representa o Ã­ndice da tabela.
+"chave" Ã© o valor a ser calculado, que pode ser um int, char[], long int etc (dependerÃ¡ do valor a ser passado para a funÃ§Ã£o.
+"M" Ã© o tamanho da tabela.
  */
  
  #include <stdio.h> 
@@ -21,22 +21,19 @@ Onde: <nome_funcao> representará a função implementada e retornará um inteiro (r
  }
  
  /*int*/void meio_quadrado(int x, int m){
- 	//eleva x² transforma o result em string pega o meio volta pra int e ve se é valido
+ 	//eleva xÂ² transforma o result em string pega o meio volta pra int e ve se Ã© valido
  	int i;
  	i = x*x;
  	char chave[50];
- 	itoa(i, chave, 10); //agora tenho a string chave
- 	//strlen chave é o numero de digitos faco a divisao interia
- 	//printf("%s\n",chave);
+ 	itoa(i, chave, 10); 
 	 int d = strlen(chave);
- 	//printf("%d\n",d);
 	 int meio = d/2;
  	//printf("%d\n",meio);
 	   printf("numero do meio = indice =  %c\n", chave[meio]);
  }
  
  int transf_raiz(int x, int m){
- 	//aqui é aquele q muda o numero pra outra base
+ 	//aqui Ã© aquele q muda o numero pra outra base
     //tenho q entrar com a base 
  	//e chama a div_inteira no numero con vertido
  	printf("\nDigite a base: ");
@@ -44,19 +41,17 @@ int base;
 	 scanf("%d",&base);
 	 int digito[10];
 	 int i=0;
-	 int novo=1000; //colocando um numero qualquer mesmo pq muda logo depois
+	 int novo=1000;
 	 while(novo > base ){
 	novo = x/base;
 	  digito[i] = x % base ;
 	  x = novo;
-	  //printf("isso aqui era pra ser o numero q vai dividir : %d\n",novo); 
- 	//printf("isso era pra ser o resto q eu vou salvar: %d\n",digito[i]); faltou pegar o quociente do ultimo
  	i++;
  	  }
  	  
  	  if(novo <= base){
  	   digito[i] = novo % base;
- 	   //printf("Ultimo digito: %d",digito[i]);
+ 	   
 }
  	   int j=0;
  	   char stringcompleta[20]="";
@@ -67,12 +62,10 @@ printf("\nNumero convertido: ");
   printf("%d",digito[i]);
   
   itoa(digito[i],teste,10) ; 
-  // printf("\ntestpassandoprasintrg: %s\n",teste);
-   	strcat(stringcompleta,teste); //teste esta recebdno meus digitos-numeros e transformando-os em string
+   	strcat(stringcompleta,teste); 
 }
 int xyz;
-xyz = atoi(stringcompleta); //transformando minha string q tem meu numero convertido para um numero decimal
-//agora com esse numero decimal faço a divisao inteira
+xyz = atoi(stringcompleta); 
   div_inteira(xyz,100);
 
 }
